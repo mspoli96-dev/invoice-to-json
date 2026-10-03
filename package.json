@@ -1,0 +1,38 @@
+{
+  "name": "invoice-to-json",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open-source invoice extraction demo by Webytex.",
+  "license": "MIT",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "samples": "tsx scripts/generate-samples.ts",
+    "evaluate": "tsx scripts/evaluate-samples.ts"
+  },
+  "dependencies": {
+    "botid": "1.5.11",
+    "lucide-react": "1.51.0",
+    "next": "16.3.8",
+    "openai": "7.27.0",
+    "pdf-lib": "1.17.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "5.0.3"
+  }
+}
