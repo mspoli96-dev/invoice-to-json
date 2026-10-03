@@ -45,6 +45,9 @@
 - Configured and inspected a USD 5 provider project spending limit. The usage display was still awaiting the earlier evaluation traffic; no threshold-enforcement test or zero-cost claim is made.
 - Verified the complete hosted browser flow after the strict BotID fix: a consented upload of `missing-currency.png` produced an AI-extracted result with unresolved currency, its warning, and total 265.55. The interface reported 4.0 seconds and an estimated model cost of approximately USD 0.0157; no console errors or warnings were captured.
 - Verified that a direct request with a valid synthetic document and correct origin, but without browser verification, returned HTTP 403 before contacting OpenAI.
-- The hosted smoke request is separate from the earlier eight-request evaluation aggregate. Source publication, GitHub CI, and the resulting Git-linked deployment remain the final release steps. No social publication has been made.
+- The hosted smoke request is separate from the earlier eight-request evaluation aggregate.
+- Published source revision `c0a2de8` to GitHub. [Its Linux CI run](https://github.com/mspoli96-dev/invoice-to-json/actions/runs/37161856366) passed clean installation, type generation, type checking, 34 tests, and the production build.
+- Verified a READY production deployment produced by Vercel's Git integration from the same source revision. Subsequent documentation-only commits retain the application implementation verified here.
+- Updated the existing LinkedIn draft with the original invoice-to-JSON cover, public links, and measured results. The article remains a draft; no social publication has been made.
 
 See [validation](VALIDATION.md) for the method, fixture results, and remaining verification boundaries. These checkpoints describe parallel AI-assisted work and do not establish a final build-duration or human-effort claim.

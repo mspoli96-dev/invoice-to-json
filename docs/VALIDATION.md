@@ -58,7 +58,8 @@ Reproduce the method with `npm run evaluate -- --run-paid-evaluation` only with 
 - A direct request with the valid synthetic document and correct origin, but without valid BotID verification, returned HTTP 403 before contacting OpenAI.
 - Hosted rate limit: `POST /api/extract`, three requests per 60 seconds per IP address in each region. After an initial observation-only stage, the enforced rule returned HTTP 429 on the fourth and fifth requests during the release check.
 - A USD 5 provider project spending limit was configured and inspected. Its usage display had not yet incorporated the evaluation requests when checked. That display is not evidence that the requests were free or that the cap has been reached and tested.
-- The 34-test suite, type checking, and local production build passed after the latest browser-verification fix. Source publication, GitHub CI, and confirmation of the resulting Git-linked deployment remain the final release steps.
+- Source revision `c0a2de8` was published to the public repository. [GitHub Actions run 37161856366](https://github.com/mspoli96-dev/invoice-to-json/actions/runs/37161856366) passed the clean install, type generation, type checking, 34 tests, and production build on Linux.
+- Vercel's Git integration produced a READY production deployment from the same `c0a2de8` revision, with the public demo alias attached.
 
 The browser smoke test is additional to the eight development evaluation requests above. Its displayed estimate is rounded and is not included in that eight-request aggregate.
 
